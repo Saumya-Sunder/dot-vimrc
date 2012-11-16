@@ -3,6 +3,16 @@ My Vim config
 
 Fork from [Maple](https://github.com/humiaozuzu)
 
+## Add
+### Shortcuts
+* `Ctrl` + `b` -> Toggle BufExplorer
+
+### Plugins
+* BufExplorer
+
+### Files
+* Cpp Tags for linux developer
+
 Maple's Vim config
 ==================
 

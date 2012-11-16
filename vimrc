@@ -156,6 +156,7 @@ let g:user_zen_expandabbr_key='<C-j>'
 
 " powerline
 "let g:Powerline_symbols = 'fancy'
+let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
@@ -231,3 +232,13 @@ if has("gui_running")
     map <D-9> 9gt
     map <D-0> :tablast<CR>
 endif
+
+" use ; to issue a command
+nnoremap ; :
+
+" Set Cpp tags
+set tags+=/home/zonyitoo/.vim-bak/tags/cpptags
+set tags+=/home/zonyitoo/.vim-bak/tags/systags
+
+" BufExpolorer
+nnoremap <C-B> :BufExpolorer<cr>

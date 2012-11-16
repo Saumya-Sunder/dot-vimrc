@@ -48,6 +48,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/bufexplorer.zip'
 
 "-------------
 " Other Utils
