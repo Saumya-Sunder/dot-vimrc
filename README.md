@@ -1,3 +1,8 @@
+My Vim config
+==================
+
+Fork from [Maple](https://github.com/humiaozuzu)
+
 Maple's Vim config
 ==================
 
