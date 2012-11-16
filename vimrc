@@ -241,4 +241,4 @@ set tags+=/home/zonyitoo/.vim-bak/tags/cpptags
 set tags+=/home/zonyitoo/.vim-bak/tags/systags
 
 " BufExpolorer
-nnoremap <C-B> :BufExpolorer<cr>
+nnoremap <C-B> :BufExplorer<cr>
