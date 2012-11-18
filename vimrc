@@ -37,12 +37,13 @@ set nofoldenable                                                  " disable fold
 set confirm                                                       " prompt when existing from an unsaved file
 set history=1000
 set backspace=indent,eol,start                                    " More powerful backspacing
+set showbreak=O00oo..
 
 " display settings
 set t_Co=256                                                      " Explicitly tell vim that the terminal has 256 colors "
 set mouse=a                                                       " use mouse in all modes
 set report=0                                                      " always report number of lines changed                "
-set nowrap                                                        " dont wrap lines
+set wrap                                                          " wrap lines
 set scrolloff=2                                                   " 2 lines above/below cursor when scrolling
 set number                                                        " show line numbers
 set showmatch                                                     " show matching bracket (briefly jump)
@@ -202,6 +203,12 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Key mapping for textmate-like identation
+nmap <D-[> <<
+nmap <D-]> >>
+nmap <D-[> <gv
+nmap <D-]> >gv
 
 " eggcache vim
 :command W w
