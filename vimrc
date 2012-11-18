@@ -156,8 +156,8 @@ let NERDTreeWinPos = "right"
 let g:user_zen_expandabbr_key='<C-j>'
 
 " powerline
-"let g:Powerline_symbols = 'fancy'
-let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
+let g:Powerline_symbols = 'fancy'
+"let g:Powerline_dividers_override = ['>>', '>', '<<', '<']
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
