@@ -11,12 +11,13 @@ syntax enable
 syntax on
 
 " color theme
-color vividchalk
+"color vividchalk
+color blackboard
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
+set cursorline "cursorcolumn
 
 " search operations
 set incsearch
@@ -71,6 +72,9 @@ autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+" Close Tag
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
 
 " syntax support
 autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
@@ -217,6 +221,7 @@ nmap <D-]> >gv
 :command Q q
 :command Qa qa
 :command QA qa
+map <C-s> :w<CR>
 
 " for macvim
 if has("gui_running")
@@ -244,8 +249,38 @@ endif
 nnoremap ; :
 
 " Set Cpp tags
-set tags+=/home/zonyitoo/.vim-bak/tags/cpptags
-set tags+=/home/zonyitoo/.vim-bak/tags/systags
+set tags+=/home/zonyitoo/.vim-bak/tags/sysinclude
 
 " BufExpolorer
 nnoremap <C-B> :BufExplorer<cr>
+
+" Snipmate Setup
+source ~/.vim/snippets/support_functions.vim
+
+" Useful Function
+"visual search mappings
+nnoremap / /\v
+vnoremap / /\v
+
+function! s:VSetSearch()
+  let temp = @@
+  norm! gvy
+  let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
+  let @@ = temp
+endfunction
+vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
+vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
+
+"jump to last cursor position when opening a file
+""dont do it when writing a commit log entry
+autocmd BufReadPost * call SetCursorPosition()
+function! SetCursorPosition()
+  if &filetype !~ 'commit\c'
+    if line("'\"") > 0 && line("'\"") <= line("$")
+      exe "normal! g`\""
+      normal! zz
+    endif
+  end
+endfunction
+
+

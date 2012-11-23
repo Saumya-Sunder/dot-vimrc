@@ -36,6 +36,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'kana/vim-smartinput'
 Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Townk/vim-autoclose'
+Bundle 'docunext/closetag.vim'
 
 "--------------
 " IDE features
@@ -80,9 +82,15 @@ Bundle 'tpope/vim-markdown'
 " Ruby
 "Bundle 'tpope/vim-endwise'
 
+" Python
+Bundle 'kevinw/pyflakes-vim.git'
+
 " Scheme
 Bundle 'kien/rainbow_parentheses.vim'
 "Bundle 'wlangstroth/vim-racket'
+
+" C
+Bundle 'vim-scripts/c.vim'
 
 "--------------
 " Color Scheme
