@@ -6,9 +6,11 @@ Fork from [Maple](https://github.com/humiaozuzu)
 ## Add
 ### Shortcuts
 * `Ctrl` + `b` -> Toggle BufExplorer
+* `Ctrl` + `<<` or `>>` -> Fix indentation
 
 ### Plugins
 * BufExplorer
+* AutoClose
 
 ### Files
 * Cpp Tags for linux developer
