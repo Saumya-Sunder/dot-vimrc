@@ -12,7 +12,8 @@ syntax on
 
 " color theme
 "color vividchalk
-color blackboard
+"color blackboard
+color elisex
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn

@@ -36,7 +36,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'kana/vim-smartinput'
 Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'Townk/vim-autoclose'
+Bundle 'zonyitoo/vim-autoclose'
 Bundle 'docunext/closetag.vim'
 
 "--------------
@@ -95,11 +95,13 @@ Bundle 'vim-scripts/c.vim'
 "--------------
 " Color Scheme
 "--------------
-Bundle 'rickharris/vim-blackboard'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'rickharris/vim-monokai'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'Lokaltog/vim-distinguished'
-Bundle 'chriskempson/vim-tomorrow-theme'
+"Bundle 'rickharris/vim-blackboard'
+"Bundle 'altercation/vim-colors-solarized'
+"Bundle 'rickharris/vim-monokai'
+"Bundle 'tpope/vim-vividchalk'
+"Bundle 'Lokaltog/vim-distinguished'
+"Bundle 'chriskempson/vim-tomorrow-theme'
+"Bundle 'vim-scripts/summerfruit.vim'
+"Bundle 'vim-scripts/summerfruit256.vim'
 
 filetype plugin indent on     " required!
