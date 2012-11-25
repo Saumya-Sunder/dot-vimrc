@@ -23,3 +23,6 @@ bundle
 
 # Colors can be install by svn
 colors
+
+# Tags should not be upload
+tags

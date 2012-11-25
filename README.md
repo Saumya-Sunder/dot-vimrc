@@ -12,9 +12,6 @@ Fork from [Maple](https://github.com/humiaozuzu)
 * BufExplorer
 * AutoClose
 
-### Files
-* Cpp Tags for linux developer
-
 ### ColorSchemes
 ```bash
 svn checkout http://vimcolorschemetest.googlecode.com/svn/colors/

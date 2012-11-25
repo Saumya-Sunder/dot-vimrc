@@ -250,7 +250,8 @@ endif
 nnoremap ; :
 
 " Set Cpp tags
-set tags+=/home/zonyitoo/.vim-bak/tags/sysinclude
+set tags+=/home/zonyitoo/.vim/tags/sysinclude
+set tags+=/home/zonyitoo/.vim/tags/pythontags
 
 " BufExpolorer
 nnoremap <C-B> :BufExplorer<cr>
