@@ -92,6 +92,12 @@ Bundle 'kien/rainbow_parentheses.vim'
 " C
 Bundle 'vim-scripts/c.vim'
 
+" CPP
+Bundle 'vim-scripts/cpp.vim--Skvirsky'
+
+" Go
+Bundle 'jnwhiteh/vim-golang'
+
 "--------------
 " Color Scheme
 "--------------
