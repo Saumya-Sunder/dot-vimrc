@@ -224,26 +224,27 @@ nmap <D-]> >gv
 :command QA qa
 map <C-s> :w<CR>
 
-" for macvim
+" for linux_vim
 if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
-    set guifont=Monaco:h13
+    set guifont=Monaco\ 11
     set showtabline=2
     set columns=140
     set lines=40
-    noremap <D-M-Left> :tabprevious<cr>
-    noremap <D-M-Right> :tabnext<cr>
-    map <D-1> 1gt
-    map <D-2> 2gt
-    map <D-3> 3gt
-    map <D-4> 4gt
-    map <D-5> 5gt
-    map <D-6> 6gt
-    map <D-7> 7gt
-    map <D-8> 8gt
-    map <D-9> 9gt
-    map <D-0> :tablast<CR>
+    colorscheme desertEx
+    noremap <M-Left> :tabprevious<cr>
+    noremap <M-Right> :tabnext<cr>
+    map <M-1> 1gt
+    map <M-2> 2gt
+    map <M-3> 3gt
+    map <M-4> 4gt
+    map <M-5> 5gt
+    map <M-6> 6gt
+    map <M-7> 7gt
+    map <M-8> 8gt
+    map <M-9> 9gt
+    map <M-0> :tablast<CR>
 endif
 
 " use ; to issue a command

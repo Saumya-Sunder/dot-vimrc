@@ -98,6 +98,9 @@ Bundle 'vim-scripts/cpp.vim--Skvirsky'
 " Go
 Bundle 'jnwhiteh/vim-golang'
 
+" QML
+Bundle 'peterhoeg/vim-qml'
+
 "--------------
 " Color Scheme
 "--------------
