@@ -101,6 +101,9 @@ Bundle 'jnwhiteh/vim-golang'
 " QML
 Bundle 'peterhoeg/vim-qml'
 
+" Typhoon Blade
+Bundle 'zonyitoo/typhoon-blade.vim'
+
 "--------------
 " Color Scheme
 "--------------

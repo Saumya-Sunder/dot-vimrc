@@ -224,7 +224,7 @@ nmap <D-]> >gv
 :command QA qa
 map <C-s> :w<CR>
 
-" for linux_vim
+" for linux_gvim
 if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
@@ -251,8 +251,7 @@ endif
 nnoremap ; :
 
 " Set Cpp tags
-set tags+=/home/zonyitoo/.vim/tags/sysinclude
-set tags+=/home/zonyitoo/.vim/tags/pythontags
+set tags+=~/.vim/tags/*.tags
 
 " BufExpolorer
 nnoremap <C-B> :BufExplorer<cr>
