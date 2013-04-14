@@ -16,6 +16,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'ervandew/supertab'
 Bundle 'honza/snipmate-snippets'
 Bundle 'mattn/zencoding-vim'
+Bundle 'davidhalter/jedi-vim'
 " snipmate dependencies
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
@@ -64,7 +65,7 @@ Bundle 'nvie/vim-togglemouse'
 " web backend
 Bundle '2072/PHP-Indenting-for-VIm'
 "Bundle 'tpope/vim-rails'
-Bundle 'beyondwords/vim-jinja2'
+"Bundle 'beyondwords/vim-jinja2'
 "Bundle 'digitaltoad/vim-jade'
 
 " web front end
@@ -94,6 +95,7 @@ Bundle 'vim-scripts/c.vim'
 
 " CPP
 Bundle 'vim-scripts/cpp.vim--Skvirsky'
+Bundle 'vim-scripts/OmniCppComplete'
 
 " Go
 Bundle 'jnwhiteh/vim-golang'

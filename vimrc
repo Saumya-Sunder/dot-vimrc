@@ -183,11 +183,30 @@ smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal omnifunc=jedi#complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
+" OmniCpp Completion.
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" automatically open and close the popup menu / preview window
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+set completeopt=menuone,menu,longest,preview
+
+" Jedi-VIm
+"let g:jedi#popup_select_first = 0
+let g:jedi#popup_on_dot = 0
+"let g:jedi#autocompletion_command = '<C-X><C-U>'
+
 " SuperTab
-"let g:SuperTabDefultCompletionType='context'
+let g:SuperTabDefultCompletionType='context'
 let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
 let g:SuperTabRetainCompletionType=2
 
@@ -251,7 +270,9 @@ endif
 nnoremap ; :
 
 " Set Cpp tags
-set tags+=~/.vim/tags/*.tags
+set tags+=~/.vim/tags/c.tags
+set tags+=~/.vim/tags/cpp.tags
+set tags+=~/.vim/tags/python.tags
 
 " BufExpolorer
 nnoremap <C-B> :BufExplorer<cr>
