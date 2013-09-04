@@ -1,121 +1,164 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
+if !filereadable(neobundle_readme)
+    echo 'Installing NeoBundle.vim'
+    echo ''
+    silent !mkdir -p ./.vim/bundle
+    silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+endif
 
-" let Vundle manage Vundle
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
 " required! 
-Bundle 'gmarik/vundle'
+NeoBundleFetch 'Sougo/neobundle.vim'
 
 "------------------
 " Code Completions
 "------------------
-Bundle 'Shougo/neocomplcache'
-Bundle 'garbas/vim-snipmate'
-Bundle 'ervandew/supertab'
-Bundle 'honza/snipmate-snippets'
-Bundle 'mattn/zencoding-vim'
-Bundle 'davidhalter/jedi-vim'
+"NeoBundle 'Shougo/neocomplcache'
+"NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'ervandew/supertab'
+"NeoBundle 'honza/snipmate-snippets'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'davidhalter/jedi-vim'
 " snipmate dependencies
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'SirVer/ultisnips'
+
 
 "-----------------
 " Fast navigation
 "-----------------
-Bundle 'tsaleh/vim-matchit'
-Bundle 'Lokaltog/vim-easymotion'
+NeoBundle 'tsaleh/vim-matchit'
+NeoBundle 'Lokaltog/vim-easymotion'
 
 "--------------
 " Fast editing
 "--------------
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'sjl/gundo.vim'
-"Bundle 'Raimondi/delimitMate'
-Bundle 'kana/vim-smartinput'
-Bundle 'godlygeek/tabular'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'zonyitoo/vim-autoclose'
-Bundle 'docunext/closetag.vim'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'sjl/gundo.vim'
+"NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'kana/vim-smartinput'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'zonyitoo/vim-autoclose'
+NeoBundle 'docunext/closetag.vim'
 
 "--------------
 " IDE features
 "--------------
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'humiaozuzu/TabBar'
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/bufexplorer.zip'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'humiaozuzu/TabBar'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'vim-scripts/bufexplorer.zip'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
+NeoBundle 'Shougo/unite-help'
+NeoBundle 'Shougo/unite-session'
+NeoBundle 'thinca/vim-unite-history'
 
 "-------------
 " Other Utils
 " ------------
-Bundle 'humiaozuzu/fcitx-status'
-Bundle 'nvie/vim-togglemouse'
+NeoBundle 'humiaozuzu/fcitx-status'
+NeoBundle 'nvie/vim-togglemouse'
+NeoBundle 'Shougo/vimproc', {
+    \ 'build' : {
+    \       'windows' : 'make -f make_mingw32.mak',
+    \       'cygwin' : 'make -f make_cygwin.mak',
+    \       'mac' : 'make -f make_mac.mak',
+    \       'unix' : 'make -f make_unix.mak',
+    \   },
+    \ }
 
 "----------------------------------------
 " Syntax/Indent for language enhancement
 "----------------------------------------
 " web backend
-Bundle '2072/PHP-Indenting-for-VIm'
-"Bundle 'tpope/vim-rails'
-"Bundle 'beyondwords/vim-jinja2'
-"Bundle 'digitaltoad/vim-jade'
+NeoBundle '2072/PHP-Indenting-for-VIm'
+"NeoBundle 'tpope/vim-rails'
+"NeoBundle 'beyondwords/vim-jinja2'
+"NeoBundle 'digitaltoad/vim-jade'
 
 " web front end
-Bundle 'othree/html5.vim'
-Bundle 'tpope/vim-haml'
-Bundle 'nono/jquery.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-"Bundle 'groenewege/vim-less'
-"Bundle 'wavded/vim-stylus'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'nono/jquery.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'kchmck/vim-coffee-script'
+"NeoBundle 'groenewege/vim-less'
+"NeoBundle 'wavded/vim-stylus'
 
 " markup language
-Bundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-markdown'
 
 " Ruby
-"Bundle 'tpope/vim-endwise'
+"NeoBundle 'tpope/vim-endwise'
 
 " Python
-Bundle 'kevinw/pyflakes-vim.git'
+NeoBundle 'kevinw/pyflakes-vim.git'
+NeoBundle 'jmcantrell/vim-virtualenv'
 
 " Scheme
-Bundle 'kien/rainbow_parentheses.vim'
-"Bundle 'wlangstroth/vim-racket'
+NeoBundle 'kien/rainbow_parentheses.vim'
+"NeoBundle 'wlangstroth/vim-racket'
 
 " C
-Bundle 'vim-scripts/c.vim'
+NeoBundle 'vim-scripts/c.vim'
 
 " CPP
-Bundle 'vim-scripts/cpp.vim--Skvirsky'
-Bundle 'vim-scripts/OmniCppComplete'
+NeoBundle 'vim-scripts/cpp.vim--Skvirsky'
+"NeoBundle 'vim-scripts/OmniCppComplete'
+NeoBundle 'vim-scripts/Cpp11-Syntax-Support'
 
 " Go
-Bundle 'jnwhiteh/vim-golang'
+NeoBundle 'jnwhiteh/vim-golang'
 
 " QML
-Bundle 'peterhoeg/vim-qml'
+NeoBundle 'peterhoeg/vim-qml'
 
-" Typhoon Blade
-Bundle 'zonyitoo/typhoon-blade.vim'
+" Nginx
+NeoBundle 'evanmiller/nginx-vim-syntax'
+
+" git
+NeoBundle 'tpope/vim-fugitive'
+
+" js
+NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'einars/js-beautify'
 
 "--------------
 " Color Scheme
 "--------------
-"Bundle 'rickharris/vim-blackboard'
-"Bundle 'altercation/vim-colors-solarized'
-"Bundle 'rickharris/vim-monokai'
-"Bundle 'tpope/vim-vividchalk'
-"Bundle 'Lokaltog/vim-distinguished'
-"Bundle 'chriskempson/vim-tomorrow-theme'
-"Bundle 'vim-scripts/summerfruit.vim'
-"Bundle 'vim-scripts/summerfruit256.vim'
+NeoBundle 'rickharris/vim-blackboard'
+NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'rickharris/vim-monokai'
+"NeoBundle 'tpope/vim-vividchalk'
+"NeoBundle 'Lokaltog/vim-distinguished'
+"NeoBundle 'chriskempson/vim-tomorrow-theme'
+"NeoBundle 'vim-scripts/summerfruit.vim'
+"NeoBundle 'vim-scripts/summerfruit256.vim'
+NeoBundle 'mbbill/desertEx'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'tomasr/molokai'
+
 
 filetype plugin indent on     " required!
+
+" Installation check
+NeoBundleCheck

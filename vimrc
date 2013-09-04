@@ -13,7 +13,8 @@ syntax on
 " color theme
 "color vividchalk
 "color blackboard
-color desertedocean
+"color desertedocean
+color desertEx
 
 " highlight current line
 au WinLeave * set nocursorline "nocursorcolumn
@@ -39,7 +40,6 @@ set nofoldenable                                                  " disable fold
 set confirm                                                       " prompt when existing from an unsaved file
 set history=1000
 set backspace=indent,eol,start                                    " More powerful backspacing
-set showbreak=O00oo..
 
 " display settings
 set t_Co=256                                                      " Explicitly tell vim that the terminal has 256 colors "
@@ -57,6 +57,11 @@ set matchpairs+=<:>                                               " specially fo
 "set relativenumber
 "set ruler                                                         " show cursor position in status bar
 "set showmode                                                      " show mode in status bar (insert/replace/...)
+
+" Display unprintable chars
+set list
+set listchars=tab:▸\ ,extends:❯,precedes:❮,nbsp:␣
+set showbreak=↪\ \ 
 
 " Default Indentation
 set autoindent
@@ -83,6 +88,10 @@ autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+
+" C++11 Support
+let g:syntastic_cpp_compiler_options = "-std=c++11"
+au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
@@ -249,9 +258,9 @@ if has("gui_running")
     "set transparency=30
     set guifont=Monaco\ 11
     set showtabline=2
-    set columns=140
-    set lines=40
-    colorscheme desertEx
+    set columns=100
+    set lines=30
+    colorscheme molokai
     noremap <M-Left> :tabprevious<cr>
     noremap <M-Right> :tabnext<cr>
     map <M-1> 1gt
