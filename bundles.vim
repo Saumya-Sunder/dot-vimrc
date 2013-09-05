@@ -24,7 +24,7 @@ NeoBundleFetch 'Sougo/neobundle.vim'
 "------------------
 "NeoBundle 'Shougo/neocomplcache'
 "NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'ervandew/supertab'
+"NeoBundle 'ervandew/supertab'
 "NeoBundle 'honza/snipmate-snippets'
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'davidhalter/jedi-vim'
@@ -85,6 +85,7 @@ NeoBundle 'Shougo/vimproc', {
     \       'unix' : 'make -f make_unix.mak',
     \   },
     \ }
+
 
 "----------------------------------------
 " Syntax/Indent for language enhancement
@@ -156,7 +157,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'mbbill/desertEx'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'tomasr/molokai'
-
+NeoBundle 'vim-scripts/sudo.vim'
 
 filetype plugin indent on     " required!
 

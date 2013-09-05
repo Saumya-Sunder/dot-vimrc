@@ -90,8 +90,11 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 " C++11 Support
-let g:syntastic_cpp_compiler_options = "-std=c++11"
-au BufNewFile,BufRead *.cpp set syntax=cpp11
+"let g:syntastic_cpp_compiler_options = "-std=c++11"
+"au BufNewFile,BufRead *.cpp set syntax=cpp11
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
@@ -197,27 +200,27 @@ autocmd FileType python setlocal omnifunc=jedi#complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
 " OmniCpp Completion.
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+"let OmniCpp_NamespaceSearch = 1
+"let OmniCpp_GlobalScopeSearch = 1
+"let OmniCpp_ShowAccess = 1
+"let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+"let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+"let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+"let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+"let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-set completeopt=menuone,menu,longest,preview
+"au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+"set completeopt=menuone,menu,longest,preview
 
 " Jedi-VIm
 "let g:jedi#popup_select_first = 0
-let g:jedi#popup_on_dot = 0
+"let g:jedi#popup_on_dot = 0
 "let g:jedi#autocompletion_command = '<C-X><C-U>'
 
 " SuperTab
-let g:SuperTabDefultCompletionType='context'
-let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
-let g:SuperTabRetainCompletionType=2
+"let g:SuperTabDefultCompletionType='context'
+"let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
+"let g:SuperTabRetainCompletionType=2
 
 " ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.DS_Store  " MacOSX/Linux
@@ -284,15 +287,10 @@ set tags+=~/.vim/tags/cpp.tags
 set tags+=~/.vim/tags/python.tags
 
 " BufExpolorer
-nnoremap <C-B> :BufExplorer<cr>
+"nnoremap <C-B> :BufExplorer<cr>
 
 " Snipmate Setup
-source ~/.vim/snippets/support_functions.vim
-
-" Useful Function
-"visual search mappings
-nnoremap / /\v
-vnoremap / /\v
+" source ~/.vim/snippets/support_functions.vim
 
 function! s:VSetSearch()
   let temp = @@
