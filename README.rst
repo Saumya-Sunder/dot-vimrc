@@ -8,8 +8,8 @@ Dependences
 
 - ``Python2`` support
 
-Installing Instruction
-----------------------
+Installing instructions
+-----------------------
 
 - First you should get a ``VIm``
 
@@ -27,8 +27,8 @@ Installing Instruction
 
 - Open ``VIm`` now, the ``NeoBundle`` will download all plugins from ``Github``
 
-Trouble shooting
-----------------
+Trouble shootings
+-----------------
 
 - Unrecognizable characters in ``Powerline``
 
@@ -109,7 +109,7 @@ Plugins
 .. _vim-togglemouse: https://github.com/nvie/vim-togglemouse
 .. _vimproc: https://github.com/Shougo/vimproc
 
-Shortcuts
+Keymaps
 ---------
 
 - ``F4``: IndentGuideToggle
@@ -123,3 +123,38 @@ Shortcuts
 - ``\ ( <leader> )`` + ``v``: Select all
 
 - ``\ ( <leader> )`` + ``a``: Ack
+
+- Navigation between split windows
+
+  - ``Ctrl`` + ``h``
+
+  - ``Ctrl`` + ``j``
+
+  - ``Ctrl`` + ``k``
+
+  - ``Ctrl`` + ``l``
+
+- Textmate-like identation
+
+  - ``<<``: ``D-[``
+
+  - ``>>``: ``D-]``
+
+- Eggache VIm ;)
+
+  - ``Ctrl`` + ``s``: Save. The same as ``:w<CR>``
+
+  - ``;``: ``:``. If you want to type command, just click ``;``. ;)
+
+Defaults
+--------
+
+- Terminal
+
+  - Color: desertEx
+
+- GVIm
+
+  - ColorScheme: molokai
+
+  - Font: Monaco 11
