@@ -27,6 +27,14 @@ Installing instructions
 
 - Open ``VIm`` now, the ``NeoBundle`` will download all plugins from ``Github``
 
+- ``cd`` into ``~/.vim/tags`` and run
+
+.. code:: bash
+
+    $ ./renew.sh
+
+This script will generate ``*.tags`` for code completion
+
 Trouble shootings
 -----------------
 
