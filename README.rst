@@ -13,11 +13,15 @@ Installing Instruction
 
 - First you should get a ``VIm``
 
-- Next clone this repository to ``~/.vim``::
+- Next clone this repository to ``~/.vim``
+
+.. code:: bash
 
     $ git clone git@github.com:zonyitoo/dot-vimrc.git ~/.vim
 
-- Set a soft-link ``~/.vimrc -> ~/.vim/vimrc``::
+- Set a soft-link ``~/.vimrc -> ~/.vim/vimrc``
+
+.. code:: bash
 
     $ ln -s ~/.vim/vimrc ~/.vimrc
 
