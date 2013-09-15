@@ -90,8 +90,8 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 " C++11 Support
-"let g:syntastic_cpp_compiler_options = "-std=c++11"
-"au BufNewFile,BufRead *.cpp set syntax=cpp11
+let g:syntastic_cpp_compiler_options = "-std=c++11"
+au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
@@ -233,6 +233,7 @@ nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
 nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
+nnoremap <c-b> :Unite buffer file<cr>
 
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j

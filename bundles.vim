@@ -27,7 +27,7 @@ NeoBundleFetch 'Sougo/neobundle.vim'
 "NeoBundle 'ervandew/supertab'
 "NeoBundle 'honza/snipmate-snippets'
 NeoBundle 'mattn/zencoding-vim'
-NeoBundle 'davidhalter/jedi-vim'
+"NeoBundle 'davidhalter/jedi-vim'
 " snipmate dependencies
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
@@ -59,7 +59,7 @@ NeoBundle 'docunext/closetag.vim'
 "--------------
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'humiaozuzu/TabBar'
+"NeoBundle 'humiaozuzu/TabBar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-fugitive'
@@ -76,6 +76,7 @@ NeoBundle 'thinca/vim-unite-history'
 " Other Utils
 " ------------
 NeoBundle 'humiaozuzu/fcitx-status'
+NeoBundle 'vim-scripts/fcitx.vim'
 NeoBundle 'nvie/vim-togglemouse'
 NeoBundle 'Shougo/vimproc', {
     \ 'build' : {
