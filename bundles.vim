@@ -75,8 +75,8 @@ NeoBundle 'thinca/vim-unite-history'
 "-------------
 " Other Utils
 " ------------
-NeoBundle 'humiaozuzu/fcitx-status'
-NeoBundle 'vim-scripts/fcitx.vim'
+"NeoBundle 'humiaozuzu/fcitx-status'
+"NeoBundle 'vim-scripts/fcitx.vim'
 NeoBundle 'nvie/vim-togglemouse'
 NeoBundle 'Shougo/vimproc', {
     \ 'build' : {
@@ -143,6 +143,9 @@ NeoBundle 'tpope/vim-fugitive'
 " js
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'einars/js-beautify'
+
+" Rust
+NeoBundle 'wting/rust.vim'
 
 "--------------
 " Color Scheme
