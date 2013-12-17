@@ -58,6 +58,7 @@ NeoBundle 'docunext/closetag.vim'
 " IDE features
 "--------------
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'majutsushi/tagbar'
 "NeoBundle 'humiaozuzu/TabBar'
 NeoBundle 'mileszs/ack.vim'
@@ -127,9 +128,11 @@ NeoBundle 'vim-scripts/c.vim'
 NeoBundle 'vim-scripts/cpp.vim--Skvirsky'
 "NeoBundle 'vim-scripts/OmniCppComplete'
 NeoBundle 'vim-scripts/Cpp11-Syntax-Support'
+NeoBundle 'Rip-Rip/clang_complete'
 
 " Go
 NeoBundle 'jnwhiteh/vim-golang'
+NeoBundle 'Blackrush/vim-gocode'
 
 " QML
 NeoBundle 'peterhoeg/vim-qml'

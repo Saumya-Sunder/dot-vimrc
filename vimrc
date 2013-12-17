@@ -95,6 +95,7 @@ au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_register_as_syntastic_checker = 0
 
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
@@ -228,7 +229,8 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " Keybindings for plugin toggle
 nmap <F5> :TagbarToggle<cr>
-nmap <F6> :NERDTreeToggle<cr>
+"nmap <F6> :NERDTreeToggle<cr>
+nmap <F6> :NERDTreeTabsToggle<cr>
 nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
 nnoremap <leader>a :Ack
@@ -256,27 +258,42 @@ nmap <D-]> >gv
 :command QA qa
 map <C-s> :w<CR>
 
-" for linux_gvim
+" for macvim
 if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
-    set guifont=Monaco\ 11
+    set guifont=Monaco\ For\ Powerline\ 11
     set showtabline=2
     set columns=100
     set lines=30
     colorscheme molokai
-    noremap <M-Left> :tabprevious<cr>
-    noremap <M-Right> :tabnext<cr>
-    map <M-1> 1gt
-    map <M-2> 2gt
-    map <M-3> 3gt
-    map <M-4> 4gt
-    map <M-5> 5gt
-    map <M-6> 6gt
-    map <M-7> 7gt
-    map <M-8> 8gt
-    map <M-9> 9gt
-    map <M-0> :tablast<CR>
+    "noremap <M-Left> :tabprevious<cr>
+    "noremap <M-Right> :tabnext<cr>
+    "map <M-1> 1gt
+    "map <M-2> 2gt
+    "map <M-3> 3gt
+    "map <M-4> 4gt
+    "map <M-5> 5gt
+    "map <M-6> 6gt
+    "map <M-7> 7gt
+    "map <M-8> 8gt
+    "map <M-9> 9gt
+    "map <M-0> :tablast<CR>
+    noremap <D-M-Left> :tabprevious<CR>
+    noremap <D-M-Right> :tabnext<CR>
+    map <D-1> 1gt
+    map <D-2> 2gt
+    map <D-3> 3gt
+    map <D-4> 4gt
+    map <D-5> 5gt
+    map <D-6> 6gt
+    map <D-7> 7gt
+    map <D-8> 8gt
+    map <D-9> 9gt
+    map <D-0> :tablast<CR>
+
+    let g:CommandTAcceptSelectionMap = '<C-t>'
+    let g:CommandTAcceptSelectionTabMap = '<CR>'
 endif
 
 " use ; to issue a command
