@@ -116,6 +116,7 @@ NeoBundle 'tpope/vim-markdown'
 " Python
 NeoBundle 'kevinw/pyflakes-vim.git'
 NeoBundle 'jmcantrell/vim-virtualenv'
+NeoBundle 'mkomitee/vim-gf-python'
 
 " Scheme
 NeoBundle 'kien/rainbow_parentheses.vim'

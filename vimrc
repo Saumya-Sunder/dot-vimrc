@@ -97,6 +97,22 @@ au BufNewFile,BufRead *.cpp set syntax=cpp11
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_register_as_syntastic_checker = 0
 
+" Clang_complete
+let g:clang_use_library=1
+" OS X
+let g:clang_library_path="/Library/Developer/CommandLineTools/usr/lib/"
+let g:clang_auto_select=1 "select first entry in popup menu but don't insert in code
+let g:clang_complete_auto=1 "auto complete after -> . and ::
+let g:clang_complete_copen=1 "open quick fix on error
+let g:clang_complete_hl_errors=1 " highlight errors and warnings 
+let g:clang_periodic_quickfix=1 " update quickfix periodically
+let g:clang_trailing_placeholder=1 " add trailing placeholder after function
+let g:clang_close_preview=1 " close preview window after completion
+"let g:clang_user_options='-Wc++11-extensions -std=c++0x -I/usr/lib/c++/v1/ -I/Users/aliak/dev/source/boost_1_53_0 -std=c++11'
+"let g:clang_snippets=1 " some magic after function ( or ,
+"let g:clang_snippets_engine='snipmate'
+"let g:clang_debug=1
+
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -292,6 +308,8 @@ if has("gui_running")
     map <D-9> 9gt
     map <D-0> :tablast<CR>
 
+    nnoremap gf <C-W>gf
+
     let g:CommandTAcceptSelectionMap = '<C-t>'
     let g:CommandTAcceptSelectionTabMap = '<CR>'
 endif
@@ -300,9 +318,9 @@ endif
 nnoremap ; :
 
 " Set Cpp tags
-set tags+=~/.vim/tags/c.tags
-set tags+=~/.vim/tags/cpp.tags
-set tags+=~/.vim/tags/python.tags
+"set tags+=~/.vim/tags/c.tags
+"set tags+=~/.vim/tags/cpp.tags
+"set tags+=~/.vim/tags/python.tags
 
 " BufExpolorer
 "nnoremap <C-B> :BufExplorer<cr>
