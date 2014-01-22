@@ -134,6 +134,7 @@ NeoBundle 'Rip-Rip/clang_complete'
 " Go
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'Blackrush/vim-gocode'
+NeoBundle 'dgryski/vim-godef'
 
 " QML
 NeoBundle 'peterhoeg/vim-qml'
