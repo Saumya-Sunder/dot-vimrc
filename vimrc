@@ -204,6 +204,9 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
     \ }
 
+" FLake8
+let g:flake8_max_line_length=119
+
 " Nerd Tree 
 let NERDChristmasTree=0
 let NERDTreeWinSize=30
