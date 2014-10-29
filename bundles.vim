@@ -13,7 +13,8 @@ if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#end()
 
 " Let NeoBundle manage NeoBundle
 " required! 
@@ -26,7 +27,7 @@ NeoBundleFetch 'Sougo/neobundle.vim'
 "NeoBundle 'garbas/vim-snipmate'
 "NeoBundle 'ervandew/supertab'
 "NeoBundle 'honza/snipmate-snippets'
-NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mattn/emmet-vim'
 "NeoBundle 'davidhalter/jedi-vim'
 " snipmate dependencies
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
@@ -38,7 +39,7 @@ NeoBundle 'SirVer/ultisnips'
 "-----------------
 " Fast navigation
 "-----------------
-NeoBundle 'tsaleh/vim-matchit'
+NeoBundle 'edsono/vim-matchit'
 NeoBundle 'Lokaltog/vim-easymotion'
 
 "--------------
@@ -130,7 +131,7 @@ NeoBundle 'vim-scripts/c.vim'
 NeoBundle 'vim-scripts/cpp.vim--Skvirsky'
 "NeoBundle 'vim-scripts/OmniCppComplete'
 NeoBundle 'vim-scripts/Cpp11-Syntax-Support'
-NeoBundle 'Rip-Rip/clang_complete'
+"NeoBundle 'Rip-Rip/clang_complete'
 
 " Go
 NeoBundle 'jnwhiteh/vim-golang'
