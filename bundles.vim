@@ -13,10 +13,10 @@ if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
-" required! 
+" required!
 NeoBundleFetch 'Sougo/neobundle.vim'
 
 "------------------
@@ -26,19 +26,19 @@ NeoBundleFetch 'Sougo/neobundle.vim'
 "NeoBundle 'garbas/vim-snipmate'
 "NeoBundle 'ervandew/supertab'
 "NeoBundle 'honza/snipmate-snippets'
-NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'vim-scripts/Emmet.vim'
 "NeoBundle 'davidhalter/jedi-vim'
 " snipmate dependencies
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'SirVer/ultisnips'
+"NeoBundle 'SirVer/ultisnips'
 
 
 "-----------------
 " Fast navigation
 "-----------------
-NeoBundle 'tsaleh/vim-matchit'
+NeoBundle 'edsono/vim-matchit'
 NeoBundle 'Lokaltog/vim-easymotion'
 
 "--------------
@@ -72,6 +72,8 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/unite-help'
 NeoBundle 'Shougo/unite-session'
 NeoBundle 'thinca/vim-unite-history'
+NeoBundle 'vim-scripts/vim-auto-save'
+NeoBundle 'Chiel92/vim-autoformat'
 
 "-------------
 " Other Utils
@@ -117,7 +119,8 @@ NeoBundle 'tpope/vim-markdown'
 "NeoBundle 'kevinw/pyflakes-vim.git'
 NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'mkomitee/vim-gf-python'
-NeoBundle 'nvie/vim-flake8'
+"NeoBundle 'nvie/vim-flake8'
+"NeoBundle 'andviro/flake8-vim'
 
 " Scheme
 NeoBundle 'kien/rainbow_parentheses.vim'
@@ -130,12 +133,13 @@ NeoBundle 'vim-scripts/c.vim'
 NeoBundle 'vim-scripts/cpp.vim--Skvirsky'
 "NeoBundle 'vim-scripts/OmniCppComplete'
 NeoBundle 'vim-scripts/Cpp11-Syntax-Support'
-NeoBundle 'Rip-Rip/clang_complete'
+"NeoBundle 'Rip-Rip/clang_complete'
 
 " Go
-NeoBundle 'jnwhiteh/vim-golang'
-NeoBundle 'Blackrush/vim-gocode'
-NeoBundle 'dgryski/vim-godef'
+"NeoBundle 'jnwhiteh/vim-golang'
+"NeoBundle 'Blackrush/vim-gocode'
+"NeoBundle 'dgryski/vim-godef'
+NeoBundle 'fatih/vim-go'
 
 " QML
 NeoBundle 'peterhoeg/vim-qml'
@@ -147,11 +151,12 @@ NeoBundle 'evanmiller/nginx-vim-syntax'
 NeoBundle 'tpope/vim-fugitive'
 
 " js
-NeoBundle 'maksimr/vim-jsbeautify'
-NeoBundle 'einars/js-beautify'
+"NeoBundle 'maksimr/vim-jsbeautify'
+"NeoBundle 'einars/js-beautify'
 
 " Rust
 NeoBundle 'wting/rust.vim'
+NeoBundle 'phildawes/racer'
 
 "--------------
 " Color Scheme
@@ -168,6 +173,8 @@ NeoBundle 'mbbill/desertEx'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'vim-scripts/sudo.vim'
+
+call neobundle#end()
 
 filetype plugin indent on     " required!
 
